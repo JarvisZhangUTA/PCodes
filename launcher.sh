@@ -14,7 +14,7 @@ sudo node server.js &
 echo '===========Build Front=============='
 cd ../PCodes-front
 sudo npm install
-#sudo ng build
+sudo ng build
 
 echo '===========Service Executor=============='
 cd ../Executor
