@@ -1,0 +1,30 @@
+<table class="pure-table pure-table-horizontal">
+
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Level</th>
+      <th>Title</th>
+      <th>Acceptance</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr class="list-item" *ngFor="let problem of problems">
+      <td>
+        {{problem.id}}
+      </td>
+      <td>
+        <div class="difficulty diff-{{problem.difficulty}}">{{difficulties[problem.difficulty]}}</div>
+      </td>
+      <td>
+        <a [routerLink]="['/problem',problem.id]">{{problem.title}}</a>
+      </td>
+      <td>
+        0.00%
+      </td>
+    </tr>
+
+  </tbody>
+</table>

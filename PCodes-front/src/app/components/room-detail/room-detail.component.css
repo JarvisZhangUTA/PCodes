@@ -1,0 +1,67 @@
+.container{
+  padding: 20px;
+}
+
+.detail{
+  font-size: 110%;
+}
+
+#editor {
+  height: 500px;
+  width: 100%;
+}
+
+#log-section {
+  margin: 0 10px 40px 20px;
+  min-height: 80px;
+  background: #FAFAFA;
+}
+
+.member {
+  padding: 0 10px;
+  font-size: 80%;
+}
+
+.difficulty {
+  padding: 0 10px;
+}
+
+.diff-1{
+  border-left: 6px solid #b9f6ca;
+}
+
+.diff-2{
+  border-left: 6px solid #69f0ae;
+}
+
+.diff-3{
+  border-left: 6px solid #00e676;
+}
+
+.diff-4{
+  border-left: 6px solid #ffca28;
+}
+
+.diff-5{
+  border-left: 6px solid #ffb300;
+}
+
+.diff-6{
+  border-left: 6px solid #ff8f00;
+}
+
+.diff-7{
+  border-left: 6px solid #e53935;
+}
+
+.diff-8{
+  border-left: 6px solid #d32f2f;
+}
+
+.diff-9{
+  border-left: 6px solid #b71c1c;
+}
+
+p{
+  line-height: 200%;
+}

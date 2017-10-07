@@ -1,0 +1,20 @@
+<table class="pure-table pure-table-horizontal">
+
+  <thead>
+  <tr>
+    <th>Problem</th>
+    <th>Owner</th>
+    <th>Members</th>
+  </tr>
+  </thead>
+
+  <tbody>
+
+  <tr [routerLink]="['/room',room.sessionId]" class="list-item" *ngFor="let room of rooms">
+    <td>Problem {{room.problem}}</td>
+    <td>{{room.owner}}</td>
+    <td>{{room.members.length}}</td>
+  </tr>
+
+  </tbody>
+</table>

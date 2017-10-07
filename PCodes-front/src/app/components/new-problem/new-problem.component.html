@@ -1,0 +1,48 @@
+
+<div class="container">
+    <div class="pure-u-1-2 pure-form pure-form-stacked">
+      <fieldset>
+        <legend>Adding Question Application</legend>
+
+        <form #formRef = "ngForm">
+          <label for="title">Title</label>
+          <input class="pure-input-1" id="title"
+                 name="title"
+                 [(ngModel)]="problem.title"
+                 type="text" placeholder="Question Title">
+
+          <label for="description">Description</label>
+          <textarea class="pure-input-1" rows="7"
+                    name="description"
+                    [(ngModel)]="problem.description"
+                    id="description" placeholder="Question Description"></textarea>
+
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty" name="difficulty" [(ngModel)]="problem.difficulty">
+            <optgroup label="Easy">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </optgroup>
+            <optgroup label="Medium">
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </optgroup>
+            <optgroup label="Hard">
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </optgroup>
+          </select>
+
+          <button type="submit"
+                  (click)="addProblem()"
+                  class="pull-right pure-button pure-button-primary">Submit</button>
+        </form>
+      </fieldset>
+    </div>
+    <div class="pure-u-2-5">
+    </div>
+</div>
+

@@ -1,0 +1,62 @@
+<div class="container pure-g">
+
+  <div class="pure-u-18-24">
+    <div *ngIf="problem">
+      <h2 class="difficulty diff-{{problem.difficulty}}">
+        {{problem.id}} {{problem.title}}
+      </h2>
+
+      <p class="detail">
+        {{problem.description}}
+      </p>
+    </div>
+
+    <div class="pull-right">
+      <div class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+          <li class="pure-menu-item pure-menu-selected">
+            <a (click)="resetEditor()" class="pure-menu-link">Reset</a>
+          </li>
+          <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a class="pure-menu-link">{{language}}</a>
+            <ul class="pure-menu-children">
+              <li *ngFor="let lang of languages" (click)="changeLang(lang)" class="pure-menu-item">
+                <a class="pure-menu-link">{{lang}}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="editor"></div>
+
+    <br>
+    <button (click)="submitCode()" class="pull-right pure-button pure-button-primary">Submit</button>
+
+  </div>
+
+  <div class="pure-u-1-24"></div>
+
+  <div *ngIf="room" class="pure-u-5-24">
+    <h2 style="color: #4CAF50;">Who else here</h2>
+    <p *ngFor="let member of room.members"
+       class="member"
+       [style.border-left] = "'6px solid ' + member.color">
+      {{member.email}}
+    </p>
+  </div>
+</div>
+
+<div class="pure-g">
+  <div class="pure-u-18-24">
+    <div id="log-section">
+      <div *ngIf="result">
+        <span style="color: #757575">Build:</span><br>
+        {{result.build}}<br>
+        <span style="color: #757575">Output:</span><br>
+        {{result.run}}<br>
+      </div>
+    </div>
+  </div>
+</div>

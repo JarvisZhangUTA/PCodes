@@ -1,0 +1,31 @@
+.container{
+  padding: 20px;
+}
+
+.img-side{
+  margin-left: 20%;
+  width: 70%;
+}
+
+label{
+  margin-top: 10px;
+}
+
+textarea{
+  resize: none;
+  z-index: -1;
+}
+
+select optgroup{
+  padding: 3px;
+  color:#757575;
+  font-style:normal;
+  font-weight:normal;
+  font-size: 70%;
+}
+
+select option{
+  color: #0C0C0C;
+  font-size: 130%;
+}
+
