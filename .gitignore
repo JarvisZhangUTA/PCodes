@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+Executor/tmp/
+PCodes-release
+PCodes-server/node_modules
+PCodes-front/node_modules
+.idea
