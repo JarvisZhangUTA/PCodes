@@ -25,5 +25,5 @@ const server = http.createServer(app);
 io.attach(server);
 
 server.listen(80, function () {
-    console.log('Server listening on port 3000!')
+    console.log('Server listening on port 80!')
 });

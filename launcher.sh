@@ -1,16 +1,22 @@
 #!/usr/bin/env bash
-fuser -k 80/tcp
-fuser -k 5000/tcp
-service redis redis_6379 start
+echo '===========Clear Ports=============='
+sudo fuser -k 80/tcp
+sudo fuser -k 5000/tcp
 
+echo '===========Set UP Redis=============='
+sudo service redis_6379 start
+
+echo '===========Service Server=============='
 cd ./PCodes-server
-npm install
-pm2 start server.js &
+sudo npm install
+sudo node server.js &
 
+echo '===========Build Front=============='
 cd ../PCodes-front
-npm install
-ng build
+sudo npm install
+#sudo ng build
 
+echo '===========Service Executor=============='
 cd ../Executor
 pip install -r requirements
 python executor_server.py &
