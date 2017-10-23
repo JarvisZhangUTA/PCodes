@@ -59,9 +59,10 @@ const initIO = function (io) {
         socket.on('restoreBuffer', () => {
             if(sessionId in logs) {
                 const instructions = logs[sessionId];
-                for(let ins of instructions) {
-                    socket.emit('change', ins);
-                }
+                if(instructions)
+                    for(let ins of instructions) {
+                        socket.emit('change', ins);
+                    }
             }
         });
 
